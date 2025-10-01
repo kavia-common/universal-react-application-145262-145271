@@ -17,8 +17,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "storybook": "storybook dev -p 6006 -s public",
+    "build-storybook": "storybook build -s public"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -41,6 +41,7 @@
     "@storybook/react-webpack5": "^7.6.18",
     "@storybook/addon-essentials": "^7.6.18",
     "@storybook/addon-interactions": "^7.6.18",
-    "@storybook/testing-library": "^0.2.2"
+    "@storybook/testing-library": "^0.2.2",
+    "storybook": "^7.6.18"
   }
 }

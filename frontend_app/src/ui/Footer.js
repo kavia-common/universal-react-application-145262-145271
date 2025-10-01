@@ -26,10 +26,10 @@ export default function Footer({
       {...props}
     >
       <Box className="container" sx={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 2 }}>
-        <Typography sx={{ color: "var(--oc-text-muted)" }}>{note}</Typography>
+        <Typography sx={{ color: "var(--oc-text-muted)", fontSize: "var(--oc-fs-14)" }}>{note}</Typography>
         <Stack direction="row" spacing={2} flexWrap="wrap">
           {links.map((l) => (
-            <Link key={l.label} href={l.href} sx={{ color: "var(--oc-text-muted)", "&:hover": { color: "var(--oc-text)" } }}>
+            <Link key={l.label} href={l.href} sx={{ color: "var(--oc-text-muted)", fontSize: "var(--oc-fs-14)", "&:hover": { color: "var(--oc-text)" } }}>
               {l.label}
             </Link>
           ))}

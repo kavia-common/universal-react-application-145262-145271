@@ -41,7 +41,7 @@ export default function SearchBar({
       elevation={0}
       sx={{
         width: "100%",
-        borderRadius: "16px",
+        borderRadius: "var(--oc-search-radius)",
         border: "1px solid var(--oc-border)",
         boxShadow: "var(--oc-shadow-sm)",
         background: "var(--oc-surface)",
@@ -54,7 +54,7 @@ export default function SearchBar({
         direction="row"
         alignItems="center"
         spacing={1}
-        sx={{ height: 80, px: 2 }}
+        sx={{ height: "var(--oc-search-height)", px: 2 }}
       >
         <SearchIcon sx={{ color: "var(--oc-text-muted)" }} />
         <InputBase
@@ -66,18 +66,18 @@ export default function SearchBar({
           }}
           sx={{
             flex: 1,
-            fontSize: 18,
-            fontWeight: 600,
+            fontSize: "var(--oc-fs-18)",
+            fontWeight: "var(--oc-font-600)",
           }}
           inputProps={{ "aria-label": placeholder }}
         />
         {showClear && (
-          <IconButton aria-label="Clear" onClick={() => onClear?.()}>
+          <IconButton aria-label="Clear" onClick={() => onClear?.()} sx={{ width: "42px", height: "42px" }}>
             <CloseIcon />
           </IconButton>
         )}
         <Divider orientation="vertical" flexItem />
-        <Box sx={{ minWidth: 240 }}>
+        <Box sx={{ minWidth: "302px" }}>
           <Dropdown
             label=""
             value={location}
@@ -89,7 +89,7 @@ export default function SearchBar({
             }
             IconComponent={ArrowDropDownIcon}
             sx={{
-              "& .MuiSelect-select": { py: 1.5, fontWeight: 600 },
+              "& .MuiSelect-select": { py: 1.5, fontWeight: "var(--oc-font-600)", fontSize: "var(--oc-fs-18)" },
             }}
           />
         </Box>

@@ -32,22 +32,25 @@ export default function EventCard({
   return (
     <Card
       sx={{
-        borderRadius: "var(--oc-radius-lg)",
+        borderRadius: "var(--oc-card-radius)",
         border: "1px solid var(--oc-border)",
         boxShadow: "var(--oc-shadow-sm)",
         overflow: "hidden",
+        width: "var(--oc-card-width)",
+        height: "var(--oc-card-height)",
         ...sx,
       }}
       {...props}
     >
-      <Grid container>
+      <Grid container sx={{ height: "100%" }}>
         <Grid
           item
           xs={12}
           md={5}
           sx={{
             position: "relative",
-            minHeight: 208,
+            width: "var(--oc-card-image-w)",
+            minHeight: "var(--oc-card-image-h)",
             backgroundImage: `url(${imageSrc})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
@@ -61,8 +64,8 @@ export default function EventCard({
               aria-label="Interested"
               onClick={onToggleInterested}
               sx={{
-                width: 48,
-                height: 48,
+                width: "var(--oc-star-size)",
+                height: "var(--oc-star-size)",
                 background: "#fff",
                 border: "1px solid var(--oc-border)",
                 boxShadow: "var(--oc-shadow-sm)",
@@ -80,28 +83,24 @@ export default function EventCard({
         <Grid item xs={12} md={7}>
           <CardContent sx={{ p: 2.5 }}>
             <Typography
-              variant="h6"
-              sx={{ fontWeight: 800, lineHeight: 1.2, mb: 1 }}
+              sx={{ fontSize: "var(--oc-fs-20)", fontWeight: "var(--oc-font-800)", lineHeight: 1.2, mb: 1 }}
             >
               {title}
             </Typography>
             <Typography
-              variant="subtitle1"
-              sx={{ color: "var(--oc-text-muted)", fontWeight: 600, mb: 0.5 }}
+              sx={{ color: "var(--oc-text-muted)", fontSize: "var(--oc-fs-16)", fontWeight: "var(--oc-font-600)", mb: 0.5 }}
             >
               {dateVenue}
             </Typography>
             <Typography
-              variant="body2"
-              sx={{ color: "var(--oc-text-muted)", mb: 1.5 }}
+              sx={{ color: "var(--oc-text-muted)", fontSize: "var(--oc-fs-14)", fontWeight: "var(--oc-font-400)", mb: 1.5 }}
             >
               {time}
             </Typography>
             <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
               <LocalActivityIcon sx={{ color: "var(--oc-primary)" }} />
               <Typography
-                variant="subtitle1"
-                sx={{ color: "var(--oc-primary)", fontWeight: 800 }}
+                sx={{ color: "var(--oc-primary)", fontSize: "var(--oc-fs-16)", fontWeight: "var(--oc-font-800)" }}
               >
                 {price}
               </Typography>

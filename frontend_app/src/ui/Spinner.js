@@ -11,7 +11,7 @@ export default function Spinner({ size = 40, label, sx = {}, ...props }) {
       {...props}
     >
       <CircularProgress size={size} sx={{ color: "var(--oc-primary)" }} />
-      {label && <Typography sx={{ color: "var(--oc-text-muted)" }}>{label}</Typography>}
+      {label && <Typography sx={{ color: "var(--oc-text-muted)", fontSize: "var(--oc-fs-16)" }}>{label}</Typography>}
     </Box>
   );
 }

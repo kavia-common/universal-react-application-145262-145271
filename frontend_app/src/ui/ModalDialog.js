@@ -24,7 +24,7 @@ export default function ModalDialog({
   return (
     <Dialog open={open} onClose={onClose} fullWidth={fullWidth} maxWidth={maxWidth} {...props}>
       {title && (
-        <DialogTitle sx={{ fontWeight: 800 }}>
+        <DialogTitle sx={{ fontWeight: "var(--oc-font-800)" }}>
           {title}
           <IconButton
             aria-label="close"

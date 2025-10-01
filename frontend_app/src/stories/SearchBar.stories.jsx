@@ -11,15 +11,17 @@ export const Default = {
     const [query, setQuery] = useState("Delhi");
     const [loc, setLoc] = useState("Mumbai");
     return (
-      <SearchBar
-        value={query}
-        onChange={setQuery}
-        onClear={() => setQuery("")}
-        onSubmit={({ query, location }) => alert(`Search: ${query} @ ${location}`)}
-        location={loc}
-        onLocationChange={setLoc}
-        locations={["Mumbai", "Delhi", "Bengaluru"]}
-      />
+      <div style={{ width: 1136 }}>
+        <SearchBar
+          value={query}
+          onChange={setQuery}
+          onClear={() => setQuery("")}
+          onSubmit={({ query, location }) => alert(`Search: ${query} @ ${location}`)}
+          location={loc}
+          onLocationChange={setLoc}
+          locations={["Mumbai", "Delhi", "Bengaluru"]}
+        />
+      </div>
     );
   },
 };

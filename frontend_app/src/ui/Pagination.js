@@ -16,7 +16,7 @@ export default function Pagination({ page, count, onChange, sx = {}, ...props })
           color: "#fff",
         },
         "& .MuiPaginationItem-root:hover": {
-          backgroundColor: "rgba(37, 99, 235, 0.08)",
+          backgroundColor: "var(--oc-primary-soft-bg)",
         },
         ...sx,
       }}

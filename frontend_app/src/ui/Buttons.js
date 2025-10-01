@@ -10,9 +10,9 @@ export function PrimaryButton({ children, sx = {}, ...props }) {
       variant="contained"
       sx={{
         textTransform: "none",
-        fontWeight: 700,
+        fontWeight: "var(--oc-font-700)",
         borderRadius: "var(--oc-radius-pill)",
-        boxShadow: "0 6px 14px rgba(37, 99, 235, 0.25)",
+        boxShadow: "var(--oc-shadow-btn-primary)",
         backgroundColor: "var(--oc-primary)",
         "&:hover": {
           backgroundColor: "var(--oc-primary)",
@@ -42,7 +42,7 @@ export function OutlineButton({ children, sx = {}, ...props }) {
       variant="outlined"
       sx={{
         textTransform: "none",
-        fontWeight: 600,
+        fontWeight: "var(--oc-font-600)",
         borderRadius: "var(--oc-radius-pill)",
         borderColor: "var(--oc-border)",
         color: "var(--oc-text)",

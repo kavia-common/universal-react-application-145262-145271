@@ -32,14 +32,14 @@ export default function NavBar({
       position="static"
       elevation={0}
       sx={{
-        background: "linear-gradient(180deg, #ffffff, #fcfdff)",
+        background: "linear-gradient(180deg, #FFFFFF, #FCFDFF)",
         borderBottom: "1px solid var(--oc-border)",
         color: "var(--oc-text)",
         ...sx,
       }}
       {...props}
     >
-      <Toolbar sx={{ gap: 2 }}>
+      <Toolbar sx={{ gap: 2, minHeight: "var(--oc-header-height)" }}>
         <Box
           sx={{
             width: 36,
@@ -49,27 +49,28 @@ export default function NavBar({
             boxShadow: "0 8px 24px rgba(37, 99, 235, 0.35)",
           }}
         />
-        <Typography sx={{ fontWeight: 800, mr: 2 }}>{branding}</Typography>
+        <Typography sx={{ fontWeight: "var(--oc-font-800)", mr: 2 }}>{branding}</Typography>
         <Stack direction="row" spacing={1} sx={{ flex: 1 }}>
-          {links.map((l) => (
-            <Button
-              key={l.id}
-              onClick={() => handleClick(l.id)}
-              sx={{
-                textTransform: "none",
-                color: active === l.id ? "var(--oc-primary)" : "var(--oc-text)",
-                backgroundColor:
-                  active === l.id ? "rgba(37, 99, 235, 0.08)" : "transparent",
-                border:
-                  active === l.id
-                    ? "1px solid rgba(37, 99, 235, 0.18)"
-                    : "1px solid transparent",
-                borderRadius: "var(--oc-radius-pill)",
-              }}
-            >
-              {l.label}
-            </Button>
-          ))}
+          {links.map((l) => {
+            const isActive = active === l.id;
+            return (
+              <Button
+                key={l.id}
+                onClick={() => handleClick(l.id)}
+                sx={{
+                  textTransform: "none",
+                  color: isActive ? "var(--oc-primary)" : "var(--oc-text)",
+                  backgroundColor: isActive ? "var(--oc-primary-soft-bg)" : "transparent",
+                  border: isActive ? "1px solid var(--oc-primary-soft-border)" : "1px solid transparent",
+                  borderRadius: "var(--oc-radius-pill)",
+                  px: "14px",
+                  py: "10px",
+                }}
+              >
+                {l.label}
+              </Button>
+            );
+          })}
         </Stack>
         {rightSlot}
       </Toolbar>

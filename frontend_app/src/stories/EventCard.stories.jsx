@@ -10,7 +10,7 @@ export const Basic = {
   render: () => {
     const [fav, setFav] = useState(false);
     return (
-      <div style={{ maxWidth: 660 }}>
+      <div style={{ width: "var(--oc-card-width)" }}>
         <EventCard
           imageSrc="/assets/figma_image_2218_5335.png"
           category="Technology & Innovation"

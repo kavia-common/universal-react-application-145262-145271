@@ -30,10 +30,10 @@ export default function EmptyState({
       <Box sx={{ display: "inline-flex", p: 2, borderRadius: "50%", background: "rgba(37,99,235,0.08)", mb: 1 }}>
         <SearchIcon sx={{ color: "var(--oc-primary)" }} />
       </Box>
-      <Typography variant="h6" sx={{ fontWeight: 800, mb: 0.5 }}>
+      <Typography variant="h6" sx={{ fontWeight: "var(--oc-font-800)", mb: 0.5 }}>
         {title}
       </Typography>
-      <Typography sx={{ color: "var(--oc-text-muted)", mb: 2 }}>{description}</Typography>
+      <Typography sx={{ color: "var(--oc-text-muted)", fontSize: "var(--oc-fs-16)", mb: 2 }}>{description}</Typography>
       {actionLabel && (
         <PrimaryButton onClick={onAction}>{actionLabel}</PrimaryButton>
       )}

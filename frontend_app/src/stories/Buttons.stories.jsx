@@ -13,3 +13,12 @@ export const Primary = {
 export const Outline = {
   render: () => <OutlineButton>Outline Action</OutlineButton>,
 };
+
+export const Disabled = {
+  render: () => (
+    <div style={{ display: "flex", gap: 12 }}>
+      <PrimaryButton disabled>Primary Disabled</PrimaryButton>
+      <OutlineButton disabled>Outline Disabled</OutlineButton>
+    </div>
+  ),
+};

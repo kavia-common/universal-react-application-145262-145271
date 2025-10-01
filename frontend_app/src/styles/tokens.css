@@ -1,0 +1,57 @@
+:root {
+  --oc-primary: #2563EB;
+  --oc-secondary: #F59E0B;
+  --oc-error: #EF4444;
+  --oc-bg: #F9FAFB;
+  --oc-surface: #FFFFFF;
+  --oc-text: #111827;
+  --oc-text-muted: #6B7280;
+  --oc-border: #E5E7EB;
+
+  --oc-primary-soft-bg: rgba(37, 99, 235, 0.08);
+  --oc-primary-soft-border: rgba(37, 99, 235, 0.18);
+  --oc-amber-soft-bg: rgba(245, 158, 11, 0.12);
+  --oc-amber-soft-border: rgba(245, 158, 11, 0.25);
+
+  --oc-gradient-start: rgba(59,130,246,0.1);
+  --oc-gradient-end: #F9FAFB;
+
+  --oc-font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, Arial, sans-serif;
+  --oc-font-800: 800;
+  --oc-font-700: 700;
+  --oc-font-600: 600;
+  --oc-font-400: 400;
+
+  --oc-fs-28: 28px;
+  --oc-fs-20: 20px;
+  --oc-fs-18: 18px;
+  --oc-fs-16: 16px;
+  --oc-fs-14: 14px;
+
+  --oc-radius-sm: 8px;
+  --oc-radius-md: 12px;
+  --oc-radius-lg: 16px;
+  --oc-radius-pill: 9999px;
+
+  --oc-shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
+  --oc-shadow-md: 0 4px 10px rgba(0,0,0,0.06);
+  --oc-shadow-lg: 0 10px 25px rgba(0,0,0,0.08);
+  --oc-shadow-btn-primary: 0 6px 14px rgba(37, 99, 235, 0.25);
+
+  --oc-transition: all .25s ease;
+  --oc-transition-slow: all .4s ease;
+
+  --oc-header-height: 75px;
+  --oc-search-height: 80px;
+  --oc-search-radius: 16px;
+  --oc-sort-height: 54px;
+  --oc-sort-radius: 12px;
+
+  --oc-card-radius: 16px;
+  --oc-card-width: 646px;
+  --oc-card-height: 228px;
+  --oc-card-image-w: 296px;
+  --oc-card-image-h: 208px;
+
+  --oc-star-size: 48px;
+}

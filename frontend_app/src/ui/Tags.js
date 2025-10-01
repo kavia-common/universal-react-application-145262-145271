@@ -12,14 +12,14 @@ export function Tag({ label, color = "default", sx = {}, ...props }) {
       borderColor: "var(--oc-border)",
     },
     primary: {
-      backgroundColor: "rgba(37, 99, 235, 0.08)",
+      backgroundColor: "var(--oc-primary-soft-bg)",
       color: "var(--oc-primary)",
-      borderColor: "rgba(37,99,235,0.18)",
+      borderColor: "var(--oc-primary-soft-border)",
     },
     secondary: {
-      backgroundColor: "rgba(245, 158, 11, 0.12)",
+      backgroundColor: "var(--oc-amber-soft-bg)",
       color: "#8a5a00",
-      borderColor: "rgba(245, 158, 11, 0.25)",
+      borderColor: "var(--oc-amber-soft-border)",
     },
   };
   const style = variants[color] ?? variants.default;
@@ -30,7 +30,7 @@ export function Tag({ label, color = "default", sx = {}, ...props }) {
       sx={{
         borderRadius: "var(--oc-radius-pill)",
         border: "1px solid",
-        fontWeight: 600,
+        fontWeight: "var(--oc-font-600)",
         ...style,
         ...sx,
       }}

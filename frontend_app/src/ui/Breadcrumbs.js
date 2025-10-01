@@ -15,7 +15,7 @@ export default function Breadcrumbs({ items = [], onNavigate, sx = {}, ...props 
     >
       {items.map((it, idx) =>
         idx === lastIndex ? (
-          <Typography key={it.label} color="text.primary" sx={{ fontWeight: 600 }}>
+          <Typography key={it.label} color="text.primary" sx={{ fontWeight: "var(--oc-font-600)" }}>
             {it.label}
           </Typography>
         ) : (
